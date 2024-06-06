@@ -1,0 +1,78 @@
+{
+  "posts": [
+    {
+      "id": "0664",
+      "displayname": "siva",
+      "email": "siva@gamil.com",
+      "password": "123456",
+      "usertype": "Admin"
+    },
+    {
+      "id": "cf4b",
+      "displayname": "pari",
+      "email": "pari@gmail.com",
+      "password": "123456",
+      "usertype": "Customer"
+    },
+    {
+      "id": "7cfd",
+      "displayname": "jagan",
+      "email": "jagan@gmail.com",
+      "password": "123456",
+      "usertype": "Admin"
+    },
+    {
+      "id": "b631",
+      "displayname": "guna",
+      "email": "guna@gmail.com",
+      "password": "123456",
+      "usertype": "Customer"
+    },
+    {
+      "id": "6308",
+      "displayname": "don",
+      "email": "don@gmail.com",
+      "password": "25414547",
+      "usertype": "Customer"
+    },
+    {
+      "id": "0067",
+      "displayname": "vicky",
+      "email": "vicky@gmail.com",
+      "password": "123456",
+      "usertype": "Customer"
+    },
+    {
+      "id": "f54d",
+      "displayname": "sowseed",
+      "email": "sowseed@2024",
+      "password": "2024",
+      "usertype": "Admin"
+    }
+  ],
+  "marks": [
+    {
+      "id": "fda2",
+      "regno": "1",
+      "name": "siva",
+      "tamil": "25",
+      "english": "35",
+      "maths": "45",
+      "science": "86",
+      "social": "35"
+    },
+    {
+      "id": "87da",
+      "regno": "2",
+      "name": "jagan",
+      "tamil": "35",
+      "english": "86",
+      "maths": "46",
+      "science": "85",
+      "social": "25"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

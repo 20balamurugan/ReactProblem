@@ -1,0 +1,49 @@
+.inputs input {
+    border: none;
+   
+    width: 60%;
+ 
+    justify-content: center;
+    border-radius: 0.25em;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.75em;
+    
+}
+
+input:focus {
+    outline-color: rgb(32, 177, 255);
+}
+
+.login-btn {
+    width: 20%;
+    height: 2em;
+    background-color: rgb(32, 177, 255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.login-btn:hover { transform: scale(1.25);}
+
+.text {
+    position: relative;
+    bottom: 0.5%;
+}
+.card1
+{
+    background:#e7e7e7;
+    border-radius: 20px;
+   
+}
+.card1 h1{
+    font-weight:800; font-size:30px; color: #272424;
+}

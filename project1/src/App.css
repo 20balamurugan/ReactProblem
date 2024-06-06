@@ -1,0 +1,16 @@
+*
+{
+  padding: 0%;
+  margin: 0%;
+}
+.head
+{
+  color: white;
+}
+.foot
+{
+  width: 100%;
+  position:absolute;
+  bottom: 0%;
+  color: white;
+}
