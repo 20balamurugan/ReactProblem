@@ -65,6 +65,7 @@ function App() {
     <Router>     
         {/* <Header /> */}
         <Routes>
+          
           <Route path="/" element={<Login  setWho={setWho}/>} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Dashboard" element={<Dashboard  name={who.name} usertype={who.usertype} />} />
