@@ -1,190 +1,3 @@
-// import React from 'react';
-// import AppBar from '@mui/material/AppBar';
-// import Box from '@mui/material/Box';
-// import Toolbar from '@mui/material/Toolbar';
-// import IconButton from '@mui/material/IconButton';
-// import Typography from '@mui/material/Typography';
-// import Menu from '@mui/material/Menu';
-// import MenuIcon from '@mui/icons-material/Menu';
-// import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
-// import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
-// import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
-// import { useNavigate } from 'react-router-dom';
-
-// const pages = ['Products', 'Pricing',];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-// function Dashboard(props) {
-//     const [anchorElNav, setAnchorElNav] = React.useState(null);
-//     const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-//     const handleOpenNavMenu = (event) => {
-//         event.preventDefault();
-//         // setAnchorElNav(event.currentTarget);
-//     };
-//     const handleOpenUserMenu = (event) => {
-//         event.preventDefault();
-//         setAnchorElUser(event.currentTarget);
-//     };
-
-//     const handleCloseNavMenu = (event) => {
-//         event.preventDefault();
-//         setAnchorElNav(null);
-//     };
-
-//     const handleCloseUserMenu = (event) => {
-//         event.preventDefault();
-//         setAnchorElUser(null);
-//     };
-//     const navigate = useNavigate()
-//     const logouts = () => {
-
-//         navigate('/');
-//     }
-
-//     return (
-//         <div>
-
-//             <AppBar position="static">
-//                 <Container maxWidth="xxl">
-//                     <Toolbar disableGutters>
-//                         {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-//                         <Typography
-//                             variant="h6"
-//                             noWrap
-//                             component="a"
-//                             // href="#app-bar-with-responsive-menu"
-//                             sx={{
-//                                 mr: 2,
-//                                 display: { xs: 'none', md: 'flex' },
-//                                 fontFamily: 'monospace',
-//                                 fontWeight: 700,
-//                                 letterSpacing: '.2rem',
-//                                 color: 'inherit',
-//                                 textDecoration: 'none',
-//                                 fontSize: '40px'
-//                             }}
-//                         >
-//                             Sowseed
-//                         </Typography>
-
-//                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-//                             <IconButton
-//                                 size="large"
-//                                 aria-label="account of current user"
-//                                 aria-controls="menu-appbar"
-//                                 aria-haspopup="true"
-//                                 onClick={handleOpenNavMenu}
-//                                 color="inherit"
-//                             >
-//                                 <MenuIcon />
-//                             </IconButton>
-//                             <Menu
-//                                 id="menu-appbar"
-//                                 anchorEl={anchorElNav}
-//                                 anchorOrigin={{
-//                                     vertical: 'bottom',
-//                                     horizontal: 'left',
-//                                 }}
-//                                 keepMounted
-//                                 transformOrigin={{
-//                                     vertical: 'top',
-//                                     horizontal: 'left',
-//                                 }}
-//                                 open={Boolean(anchorElNav)}
-//                                 onClose={handleCloseNavMenu}
-//                                 sx={{
-//                                     display: { xs: 'block', md: 'none' },
-//                                 }}
-//                             >
-//                                 {pages.map((page) => (
-//                                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-//                                         <Typography textAlign="center">{page}</Typography>
-//                                     </MenuItem>
-//                                 ))}
-//                             </Menu>
-//                         </Box>
-//                         <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-//                         <Typography
-//                             variant="h5"
-//                             noWrap
-//                             component="a"
-//                             href="#app-bar-with-responsive-menu"
-//                             sx={{
-//                                 mr: 2,
-//                                 display: { xs: 'flex', md: 'none' },
-//                                 flexGrow: 1,
-//                                 fontFamily: 'monospace',
-//                                 fontWeight: 700,
-//                                 letterSpacing: '.3rem',
-//                                 color: 'inherit',
-//                                 textDecoration: 'none',
-//                             }}
-//                         >
-//                             LOGO
-//                         </Typography>
-//                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-//                             {pages.map((page) => (
-//                                 <Button
-//                                     key={page}
-//                                     onClick={handleCloseNavMenu}
-//                                     sx={{ my: 2, color: 'white', display: 'block' }}
-//                                 >
-//                                     {page}
-//                                 </Button>
-//                             ))}
-//                         </Box>
-
-//                         <Box sx={{ flexGrow: 0 }}>
-//                             <Tooltip title="Open settings">
-//                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-//                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-//                                 </IconButton>
-//                             </Tooltip>
-//                             <Menu
-//                                 sx={{ mt: '45px' }}
-//                                 id="menu-appbar"
-//                                 anchorEl={anchorElUser}
-//                                 anchorOrigin={{
-//                                     vertical: 'top',
-//                                     horizontal: 'right',
-//                                 }}
-//                                 keepMounted
-//                                 transformOrigin={{
-//                                     vertical: 'top',
-//                                     horizontal: 'right',
-//                                 }}
-//                                 open={Boolean(anchorElUser)}
-//                                 onClose={handleCloseUserMenu}
-//                             >
-//                                 {settings.slice(0, 2).map((setting) => (
-//                                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-//                                         <Typography textAlign="center">{setting}</Typography>
-//                                     </MenuItem>
-//                                 ))}
-
-//                                 <MenuItem key={settings[settings.length - 1]} onClick={handleCloseUserMenu}>
-//                                     <Typography textAlign="center" onClick={logouts}>{settings[settings.length - 1]}</Typography>
-//                                 </MenuItem>
-
-
-
-//                             </Menu>
-//                         </Box>
-//                     </Toolbar>
-//                 </Container>
-//             </AppBar>
-//              <h1>wELCOME T0 {props.name}</h1>                       
-//         </div>
-//     );
-// };
-
-// export default Dashboard
-
-
 
 import Navbar from './Navbar'
 import { Link, useNavigate } from 'react-router-dom';
@@ -252,6 +65,21 @@ const Dashboard = (props) => {
 
   }
 
+  const DataDelete=(regno)=> 
+    {
+      const config=window.confirm("do you wand delete")
+      if(config)
+        {
+          
+          axios.delete('http://localhost:3000/marks/1')
+          .then(response=>{
+            alert("delete success",response.data)
+            setData(data.filter(user => user.regno !== regno));
+          })
+        }
+    }
+
+
   return (
     <div className='text-center'>
       <Navbar name={props.name} usertype={props.usertype} />
@@ -318,7 +146,7 @@ const Dashboard = (props) => {
 
           <table className='container col-8 mt-5 d-flex justify-content-center'>
             <tbody className="p-2">
-              <tr className='border  text-center'>
+              <tr className='  text-center'>
                 <th className='border px-4' >Register number</th>
                 <th className='border px-4'>Name</th>
                 <th className='border px-4'>Tamil</th>
@@ -334,7 +162,7 @@ const Dashboard = (props) => {
                 
                 return (
 
-                  <tr className='border text-center ' key={Index}>
+                  <tr className=' text-center ' key={Index}>
 
                     <td className='border'>{data.regno }</td>
                     <td className='border'>{data.name}</td>
@@ -344,10 +172,12 @@ const Dashboard = (props) => {
                     <td className='border'>{data.science}</td>
                     <td className='border'>{data.social}</td>
                     <td className='border'>{result}</td>
-                    <div className>
+                    
+                    <td className='p-2'>
                     <Link to={`/update/${data.regno}`} className='btn btn-info '>update</Link>
-                    <button className='btn btn-danger '>Delete</button>
-                    </div>
+                    <button className='btn btn-danger  ' onClick={()=>DataDelete(data.regno)}>Delete</button>
+                    </td>
+                   
                   </tr>
                 )
               }) : null}

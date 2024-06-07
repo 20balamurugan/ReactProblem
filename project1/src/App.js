@@ -82,35 +82,3 @@ function App() {
 export default App;
 
 
-
-
-// import React, { useState } from 'react';
-// import { BrowserRouter as Router, Route,Navigate , Routes } from 'react-router-dom';
-// // import Header from './Component/Header';
-// import Login from './Component/Login';
-// import Signup from './Component/Signup';
-// import Dashboard from './Component/Dashboard';
-
-// function App() {
-//   const [authenticated, setAuthenticated] = useState(false);
-//   const [who,setWho] = useState('admin')
-  
-
-//   return (
-//     <Router>
-//     <Routes>
-//       <Route path="/" element={authenticated ? <Dashboard name={() =>setWho(who)} /> : <Login setAuthenticated={setAuthenticated} />} />
-//       <Route path="/signup" element={<Signup />} />
-//       <Route path="/dashboard" element={authenticated ? <Dashboard name={who} /> : <Navigate to="/" />} />
-//     </Routes>
-//   </Router>
-  
-//   );
-// }
-
-// export default App;
-
-
-
-
-

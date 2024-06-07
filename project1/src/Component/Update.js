@@ -16,43 +16,30 @@ const Update = () => {
         social: ""
     });
 
-    // useEffect(() => {
-    //     axios.get(`http://localhost:3000/marks?regno=${regno}`)
-    //     .then(response => {
-    //         // console.log(response.data);
-    //       setDatas({
-    //           ...datas,
-    //           name:response.data[0].name, tamil:response.data[0].tamil, english:response.data[0].english,maths:response.data[0].maths,science:response.data[0].science,social:response.data[0].social
-    //         })
-            
-    //       })
-    //       .catch(error => {
-    //         console.log("Error:", error);
-    //       });
-    // }, []); 
-
-
     useEffect(() => {
-      axios.get('http://localhost:3000/marks/ '+regno)
-      .then(response => {
-          console.log(response.data)
-        // setDatas({
-        //     ...datas,
-        //     name:response.data[0].name, tamil:response.data[0].tamil, english:response.data[0].english,maths:response.data[0].maths,science:response.data[0].science,social:response.data[0].social
-        //   })
-          
-        })
-        .catch(error => {
-          console.log("Error:", error);
-        });
-  }, []); 
+        axios.get(`http://localhost:3000/marks?regno=${regno}`)
+        .then(response => {
+            // console.log(response.data);
+          setDatas({
+              ...datas,
+              name:response.data[0].name, tamil:response.data[0].tamil, english:response.data[0].english,maths:response.data[0].maths,science:response.data[0].science,social:response.data[0].social
+            })
+            
+          })
+          .catch(error => {
+            console.log("Error:", error);
+          });
+    }, [regno]); 
+
+
+
     
  
     const navigate=useNavigate()
     const HandleUpdate = (e) => {
       console.log(datas);
         e.preventDefault();
-        axios.put(`http://localhost:3000/marks`,datas)
+        axios.put(`http://localhost:3000/marks?regno=${regno}`,datas)
 
           .then(response => {
             console.log(response.data[0]);
@@ -83,7 +70,7 @@ const Update = () => {
                   <span>
                     <div className='text-center mt-4' style={{ display: "flex", justifyContent: "space-between" }}>
                       <label className='fs-3 mx-2'  >NAME:</label>
-                      <input type="text" name="name" value={datas.name} onChange={e=>setDatas({...datas,name:e.target.value})} />
+                      <input type="text" name="name" value={datas.name} onChange={(e)=>setDatas({...datas,name:e.target.value})} />
                     </div>
                   </span>
                   <span>
