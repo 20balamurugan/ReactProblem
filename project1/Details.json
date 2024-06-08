@@ -1,53 +1,19 @@
 {
   "posts": [
+    
     {
-      "id": "0664",
-      "displayname": "siva",
-      "email": "siva@gamil.com",
-      "password": "123456",
-      "usertype": "Admin"
+      "id": "1a6c",
+      "name": "bala",
+      "email": "bala@gmail.com",
+      "password": "Bala@12345",
+      "re_Enter": "Bala@12345"
     },
     {
-      "id": "cf4b",
-      "displayname": "pari",
-      "email": "pari@gmail.com",
-      "password": "123456",
-      "usertype": "Customer"
-    },
-    {
-      "id": "7cfd",
-      "displayname": "jagan",
-      "email": "jagan@gmail.com",
-      "password": "123456",
-      "usertype": "Admin"
-    },
-    {
-      "id": "b631",
-      "displayname": "guna",
-      "email": "guna@gmail.com",
-      "password": "123456",
-      "usertype": "Customer"
-    },
-    {
-      "id": "6308",
-      "displayname": "don",
-      "email": "don@gmail.com",
-      "password": "25414547",
-      "usertype": "Customer"
-    },
-    {
-      "id": "0067",
-      "displayname": "vicky",
-      "email": "vicky@gmail.com",
-      "password": "123456",
-      "usertype": "Customer"
-    },
-    {
-      "id": "f54d",
-      "displayname": "sowseed",
-      "email": "sowseed@2024",
-      "password": "2024",
-      "usertype": "Admin"
+      "id": "dd61",
+      "name": "Surya",
+      "email": "snbalamurugan20@gmail.com",
+      "password": "ffwet3frt@123ASDE",
+      "re_Enter": "ffwet3frt@123ASDE"
     }
   ],
   "marks": [

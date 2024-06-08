@@ -42,47 +42,75 @@
 // export default App;
 
 
+// import React from 'react';
+// import './App.css';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// // import Header from './Component/Header';
+// import Footer from './Component/Footer';
+// import Login from './Component/Login';
+// import Signup from './Component/Signup';
+// import Dashboard from './Component/Dashboard';
+// import { useState } from 'react';
+// import Cuspage from './Component/Cuspage';
+// import Update from './Component/Update';
+
+
+// function App() {
+//   const [who,setWho] = useState({
+//     name:"",
+//     usertype:" "
+//   })  
+//   return (
+//     <div>
+//     <Router>     
+//         {/* <Header /> */}
+//         <Routes>
+          
+//           <Route path="/" element={<Login  setWho={setWho}/>} />
+//           <Route path="/Signup" element={<Signup />} />
+//           <Route path="/Dashboard" element={<Dashboard  name={who.name} usertype={who.usertype} />} />
+//           <Route path='/customer' element={<Cuspage />}/>
+//           <Route path='/update/:regno' element={<Update />}/>
+//         </Routes>
+//         <Footer />
+        
+//           </Router>
+        
+//     </div>
+//   );
+// }
+
+// export default App;
+
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from './Component/Header';
 import Footer from './Component/Footer';
-import Login1 from './NewComponent/Login1';
+// import Login from './Component/Login';
 // import Signup from './Component/Signup';
 // import Dashboard from './Component/Dashboard';
 import { useState } from 'react';
+import ReactLogin from './NewCompounent/ReactLogin';
 // import Cuspage from './Component/Cuspage';
 // import Update from './Component/Update';
-// import Navbar from './NewCompounent/Navbar';
-
+import Register from './NewCompounent/Register';
 
 function App() {
-  const [who,setWho] = useState({
-    name:"",
-    usertype:" "
-  })  
+  const [who, setWho] = useState({
+    name: "",
+    usertype: ""
+  });
+
   return (
     <div>
-    {/* <Router>     
-        
-        <Routes>
-          
-          <Route path="/" element={<Login  setWho={setWho}/>} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Dashboard" element={<Dashboard  name={who.name} usertype={who.usertype} />} />
-          <Route path='/customer' element={<Cuspage />}/>
-          <Route path='/update/:regno' element={<Update />}/>
-        </Routes>
-        <Footer />
-        
-          </Router>
-         */}
-
-         <Login1 />
+    <Router>
+      <Routes>
+        <Route path='register' element={<Register />} />
+        <Route path='/' element={<ReactLogin />} />
+      </Routes>
+      <Footer />
+    </Router>
     </div>
   );
 }
 
 export default App;
-
-
