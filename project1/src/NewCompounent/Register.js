@@ -8,6 +8,7 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import axios from 'axios';
 import { passwordValidator } from '../NewCompounent/Service/Validation';
+import '../NewCompounent/Register.css';
 
 
 
@@ -40,9 +41,11 @@ const Register = () => {
           alert("upload error: " + error);
         });
     }
-
   };
-
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange= (event)=> {
+    setIsChecked(event.target.checked);
+  };
   return (
     <>
       <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
@@ -58,7 +61,7 @@ const Register = () => {
                         <InputGroup.Text>
                           <FaUserPlus />
                         </InputGroup.Text>
-                        <Form.Control type="text" name='name' onChange={e => setInput({ ...Input, [e.target.name]: e.target.value })} placeholder="Enter Name" required />
+                        <Form.Control className='ip' type="text" name='name' onChange={e => setInput({ ...Input, [e.target.name]: e.target.value })} placeholder="Enter Name" required />
                         <Form.Text className="text-muted invalid-feedback">
                           Enter your Name
                         </Form.Text>
@@ -104,10 +107,10 @@ const Register = () => {
                     {!validatepassword && <p className='text-danger'>Please Enter Strong Password</p>}
 
                     <Form.Group className="mb-2" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Check me out" />
+                      <Form.Check type="checkbox" label="Check me out" onChange={handleCheckboxChange} />
                     </Form.Group>
                     <Form.Group className="text-center">
-                      <Button variant="info" className="w-50 text-white" type="submit">
+                      <Button variant="info" className="w-50 text-white" disabled={!isChecked} type="submit">
                         Submit
                       </Button>
                     </Form.Group>
