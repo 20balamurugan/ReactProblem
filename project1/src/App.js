@@ -47,12 +47,13 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Header from './Component/Header';
 import Footer from './Component/Footer';
-import Login from './Component/Login';
-import Signup from './Component/Signup';
-import Dashboard from './Component/Dashboard';
+import Login1 from './NewComponent/Login1';
+// import Signup from './Component/Signup';
+// import Dashboard from './Component/Dashboard';
 import { useState } from 'react';
-import Cuspage from './Component/Cuspage';
-import Update from './Component/Update';
+// import Cuspage from './Component/Cuspage';
+// import Update from './Component/Update';
+// import Navbar from './NewCompounent/Navbar';
 
 
 function App() {
@@ -62,8 +63,8 @@ function App() {
   })  
   return (
     <div>
-    <Router>     
-        {/* <Header /> */}
+    {/* <Router>     
+        
         <Routes>
           
           <Route path="/" element={<Login  setWho={setWho}/>} />
@@ -75,7 +76,9 @@ function App() {
         <Footer />
         
           </Router>
-        
+         */}
+
+         <Login1 />
     </div>
   );
 }
