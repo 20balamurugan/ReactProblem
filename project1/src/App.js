@@ -42,44 +42,62 @@
 // export default App;
 
 
-import React from 'react';
-import './App.css';
+// import React from 'react';
+// import './App.css';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// // import Header from './Component/Header';
+// import Footer from './Component/Footer';
+// import Login from './Component/Login';
+// import Signup from './Component/Signup';
+// import Dashboard from './Component/Dashboard';
+// import { useState } from 'react';
+// import Cuspage from './Component/Cuspage';
+// import Update from './Component/Update';
+
+
+// function App() {
+//   const [who,setWho] = useState({
+//     name:"",
+//     usertype:" "
+//   })  
+//   return (
+//     <div>
+//     <Router>     
+//         {/* <Header /> */}
+//         <Routes>
+          
+//           <Route path="/" element={<Login  setWho={setWho}/>} />
+//           <Route path="/Signup" element={<Signup />} />
+//           <Route path="/Dashboard" element={<Dashboard  name={who.name} usertype={who.usertype} />} />
+//           <Route path='/customer' element={<Cuspage />}/>
+//           <Route path='/update/:regno' element={<Update />}/>
+//         </Routes>
+//         <Footer />
+        
+//           </Router>
+        
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Header from './Component/Header';
-import Footer from './Component/Footer';
-import Login from './Component/Login';
-import Signup from './Component/Signup';
-import Dashboard from './Component/Dashboard';
-import { useState } from 'react';
-import Cuspage from './Component/Cuspage';
-import Update from './Component/Update';
+import Register from './NewCompounent/Register';
 
-
-function App() {
-  const [who,setWho] = useState({
-    name:"",
-    usertype:" "
-  })  
+const App = () => {
   return (
     <div>
-    <Router>     
-        {/* <Header /> */}
+      <Router>
         <Routes>
-          
-          <Route path="/" element={<Login  setWho={setWho}/>} />
-          <Route path="/Signup" element={<Signup />} />
-          <Route path="/Dashboard" element={<Dashboard  name={who.name} usertype={who.usertype} />} />
-          <Route path='/customer' element={<Cuspage />}/>
-          <Route path='/update/:regno' element={<Update />}/>
+          <Route path='Register' element={<Register/>} />
         </Routes>
-        <Footer />
-        
-          </Router>
-        
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 
 

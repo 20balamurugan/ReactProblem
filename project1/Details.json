@@ -48,6 +48,13 @@
       "email": "sowseed@2024",
       "password": "2024",
       "usertype": "Admin"
+    },
+    {
+      "id": "1a6c",
+      "name": "bala",
+      "email": "bala@gmail.com",
+      "password": "Bala@12345",
+      "re_Enter": "Bala@12345"
     }
   ],
   "marks": [
