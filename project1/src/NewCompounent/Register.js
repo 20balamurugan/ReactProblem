@@ -46,11 +46,9 @@ const Register = () => {
           alert("upload error: " + error);
         });
     }
+
   };
-  const [isChecked, setIsChecked] = useState(false);
-  const handleCheckboxChange= (event)=> {
-    setIsChecked(event.target.checked);
-  };
+
   return (
     <>
       <div className="bg-body-tertiary min-vh-100 d-flex flex-row align-items-center">
@@ -107,14 +105,14 @@ const Register = () => {
                         </Form.Text>
                       </InputGroup>
                     </Form.Group>
-                    <p className={password === "password matched" ? "text-success" : "text-danger"}>{password}</p>
+                    <p className={password === "Password Mismatch" ? "text-danger" : "text-success"}>{password}</p>
                     {!validatepassword && <p className='text-danger'>Please Enter Strong Password</p>}
 
                     <Form.Group className="mb-2" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Check me out" onChange={handleCheckboxChange} />
+                      <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
                     <Form.Group className="text-center">
-                      <Button variant="info" className="w-50 text-white" disabled={!isChecked} type="submit">
+                      <Button variant="info" className="w-50 text-white" type="submit">
                         Submit
                       </Button>
                     </Form.Group>
