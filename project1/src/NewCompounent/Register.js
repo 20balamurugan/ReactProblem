@@ -2,13 +2,18 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import { Form, InputGroup } from 'react-bootstrap';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaUserPlus } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import axios from 'axios';
 import { passwordValidator } from '../NewCompounent/Service/Validation';
+<<<<<<< HEAD
 import '../NewCompounent/Register.css';
+=======
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+>>>>>>> 8b1c31575857f03f78deaeceb4953ec6fd2e272a
 
 
 
@@ -99,7 +104,6 @@ const Register = () => {
                           Re-enter your password
                         </Form.Text>
                         <Form.Text className="text-muted ">
-
                         </Form.Text>
                       </InputGroup>
                     </Form.Group>

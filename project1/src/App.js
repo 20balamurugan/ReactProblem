@@ -82,22 +82,36 @@
 
 // export default App;
 
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './Component/Footer';
+// import Login from './Component/Login';
+// import Signup from './Component/Signup';
+// import Dashboard from './Component/Dashboard';
+import { useState } from 'react';
+import ReactLogin from './NewCompounent/ReactLogin';
+// import Cuspage from './Component/Cuspage';
+// import Update from './Component/Update';
 import Register from './NewCompounent/Register';
+// This is source control validation
+// this is edit siva
+function App() {
+  const [who, setWho] = useState({
+    name: "",
+    usertype: ""
+  });
 
-const App = () => {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path='Register' element={<Register/>} />
-        </Routes>
-      </Router>
+    <Router>
+      <Routes>
+        <Route path='register' element={<Register />} />
+        <Route path='/' element={<ReactLogin />} />
+      </Routes>
+      <Footer />
+    </Router>
     </div>
-  )
+  );
 }
 
-export default App
-
-
+export default App;

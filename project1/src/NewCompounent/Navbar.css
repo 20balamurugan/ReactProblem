@@ -1,0 +1,17 @@
+.navbar-toggler {
+    border: none;
+    border: white;
+}
+.navbar-toggler:focus,
+.navbar-toggler:hover,
+.navbar-toggler:active {
+    outline: none !important;
+    border: none !important;
+}
+
+
+
+.navbar-brand{
+    margin-right: 1720px;
+    margin-bottom: 6px;
+}
