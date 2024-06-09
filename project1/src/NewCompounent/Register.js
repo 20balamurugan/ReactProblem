@@ -8,12 +8,7 @@ import { MdMarkEmailRead } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import axios from 'axios';
 import { passwordValidator } from '../NewCompounent/Service/Validation';
-<<<<<<< HEAD
 import '../NewCompounent/Register.css';
-=======
-import 'bootstrap/dist/css/bootstrap.min.css';
-
->>>>>>> 8b1c31575857f03f78deaeceb4953ec6fd2e272a
 
 
 
