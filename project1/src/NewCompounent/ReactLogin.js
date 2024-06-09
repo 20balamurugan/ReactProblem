@@ -23,6 +23,7 @@ const ReactLogin = () => {
   });
   const [error, setError] = useState('');
   const [api, setApi] = useState([]);
+  const [isButton, setIsButton] = useState(false)
 
   useEffect(() => {
     axios.get('http://localhost:3000/posts')
@@ -40,6 +41,12 @@ const ReactLogin = () => {
       ...prevData,
       [name]: value
     }));
+    if(value.trim() !== ''){
+      setIsButton(true)
+    }
+    else{
+      setIsButton(false)
+    }
   };
 
   const handleLogin = (e) => {
@@ -85,7 +92,7 @@ const ReactLogin = () => {
                       onChange={handleInputValue}
                     />
                   </CInputGroup>
-                  <CButton color="primary" onClick={handleLogin} className="px-4">
+                  <CButton color="primary" onClick={handleLogin} disabled={!isButton} className="px-4">
                     Login
                   </CButton>
                   <Link to="/forgot-password" className="text-right mt-2 d-block">
