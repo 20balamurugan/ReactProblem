@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import { Form, InputGroup } from 'react-bootstrap';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaUserPlus } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -54,7 +53,7 @@ const Register = () => {
             <Col xs={12} md={9} lg={7} xl={6} >
               <Card className="mx-auto ">
                 <Card.Body className="p-3">
-                  <h1 className='text-center text-info'>Create your account</h1>
+                  <h1 className='text-center text-dark'>Create your account</h1>
                   <Form onSubmit={InputHandle} className='need-validation'>
                     <Form.Group className="mb-2 was-validated">
                       <InputGroup>

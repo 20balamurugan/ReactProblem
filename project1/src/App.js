@@ -53,6 +53,7 @@
 // import { useState } from 'react';
 // import Cuspage from './Component/Cuspage';
 // import Update from './Component/Update';
+// import SideNav from './NewCompounent/SideNav';
 
 
 // function App() {
@@ -72,6 +73,7 @@
 //           <Route path='/customer' element={<Cuspage />}/>
 //           <Route path='/update/:regno' element={<Update />}/>
 //         </Routes>
+//         <SideNav/>
 //         <Footer />
         
 //           </Router>
@@ -82,19 +84,20 @@
 
 // export default App;
 
+
+// new components
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Footer from './Component/Footer';
-// import Login from './Component/Login';
-// import Signup from './Component/Signup';
-// import Dashboard from './Component/Dashboard';
 import { useState } from 'react';
 import ReactLogin from './NewCompounent/ReactLogin';
-// import Cuspage from './Component/Cuspage';
-// import Update from './Component/Update';
 import Register from './NewCompounent/Register';
-// This is source control validation
-// this is edit siva
+import SideNav from './NewCompounent/SideNav';
+import Home from './NewCompounent/Home';
+
+
+
 function App() {
   const [who, setWho] = useState({
     name: "",
@@ -102,15 +105,25 @@ function App() {
   });
 
   return (
+    
     <div>
     <Router>
-      <Routes>
+      {/* <div className='d-flex'>
+        <div className='col-auto'>
+        <SideNav/>
+        </div>
+      </div> */}
+      <Routes>      
         <Route path='register' element={<Register />} />
-        <Route path='/' element={<ReactLogin />} />
+        <Route path='/' element={<ReactLogin />} />    
+        <Route path='/home' element={<Home />} />
       </Routes>
-      <Footer />
+      
     </Router>
+   
+    
     </div>
+   
   );
 }
 

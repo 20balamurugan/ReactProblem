@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+
 // import marks from '../Services/Api';
 
 
@@ -83,7 +84,7 @@ const Dashboard = (props) => {
   return (
     <div className='text-center'>
       <Navbar name={props.name} usertype={props.usertype} />
-
+    
       <button className=" text-center" onClick={toggleVisibility} style={{ marginTop: "8%" }}>ADD DETAILS</button>
       {visible ? (
         <>

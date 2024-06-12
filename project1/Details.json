@@ -1,6 +1,5 @@
 {
   "posts": [
-    
     {
       "id": "1a6c",
       "name": "bala",
@@ -14,6 +13,13 @@
       "email": "snbalamurugan20@gmail.com",
       "password": "ffwet3frt@123ASDE",
       "re_Enter": "ffwet3frt@123ASDE"
+    },
+    {
+      "id": "a766",
+      "displayname": "siva",
+      "email": "siva@gamil.com",
+      "password": "123456",
+      "usertype": "Admin"
     }
   ],
   "marks": [
@@ -38,6 +44,11 @@
       "social": "25"
     }
   ],
+
+  "order": [
+    
+  ],
+  
   "profile": {
     "name": "typicode"
   }
