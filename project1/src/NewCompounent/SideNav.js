@@ -25,7 +25,7 @@ const SideNav = () => {
     return (
         <div >
 
-            <nav className="navbar bg- fixed-top">
+            <nav className="navbar bg-light fixed-top">
 
                 <div className="container-fluid col-11 mx-auto ">
 
@@ -60,11 +60,11 @@ const SideNav = () => {
                                 <hr className='text-dark'/>
                                 <li className="nav-item" style={{ display: "inline-flex", alignItems: "center" }}>
                                 <MdBorderColor className='icon' style={{ marginRight: "8px" }} />
-                                    <Link to='/register' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Order</Link>
+                                    <Link to='/home' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Order</Link>
                                 </li>
                                 <li className="nav-item" style={{ display: "inline-flex", alignItems: "center" }}>
                                 <MdOutlineMiscellaneousServices className='icon' style={{ marginRight: "8px" }} />
-                                    <Link to='/register' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Services</Link>
+                                    <Link to='/sericice' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Services</Link>
                                 </li>
                                 <li className="nav-item" style={{ display: "inline-flex", alignItems: "center" }}>
                                 <FaUserGroup className='icon' style={{ marginRight: "8px" }} />
@@ -87,3 +87,50 @@ const SideNav = () => {
 }
 
 export default SideNav;
+
+
+// import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
+// import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+// import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+// import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+// import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
+// import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+// import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+// import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+
+// function SideNav() {
+//   const { collapseSidebar } = useProSidebar();
+
+//   return (
+//     <div id="app" style={({ height: "100vh" }, { display: "flex" })}>
+//       <Sidebar style={{ height: "100vh" }}>
+//         <Menu>
+//           <MenuItem
+//             icon={<MenuOutlinedIcon />}
+//             onClick={() => {
+//               collapseSidebar();
+//             }}
+//             style={{ textAlign: "center" }}
+//           >
+//             {" "}
+//             <h2>Admin</h2>
+//           </MenuItem>
+
+//           <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
+//           <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
+//           <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
+//           <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
+//           <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
+//           <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem>
+//         </Menu>
+//       </Sidebar>
+//       <main>
+//         <h1 style={{ color: "black", marginLeft: "5rem" }}>
+//           React-Pro-Sidebar
+//         </h1>
+//       </main>
+//     </div>
+//   );
+// }
+
+// export default SideNav;

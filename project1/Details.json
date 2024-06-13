@@ -44,11 +44,21 @@
       "social": "25"
     }
   ],
-
   "order": [
-    
+    {
+      "id": "f2a5",
+      "cusname": "siva",
+      "orderdate": "2024-06-13",
+      "service": {
+        "value": "Shaving",
+        "label": "Shaving - $100",
+        "amount": "100"
+      },
+      "amount": "",
+      "Disamount": "50",
+      "doc": "2024-06-13"
+    }
   ],
-  
   "profile": {
     "name": "typicode"
   }

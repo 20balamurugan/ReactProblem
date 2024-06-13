@@ -31,13 +31,12 @@ const Cuspage = () => {
   }, []);
 
   const InputHandle = (e) => {
-    e.preventDefault();
-    
-    const filteredData = value.filter(user =>
-      user.name.toLowerCase().includes(e.target.value.toLowerCase()) || user.regno.includes(e.target.value))
-     
-      setDatas(filteredData)
-    
+        e.preventDefault();
+        const filteredData = value.filter(user =>
+          user.name.toLowerCase().includes(e.target.value.toLowerCase()) || user.regno.includes(e.target.value))
+        
+          setDatas(filteredData)
+        
   }
  
 
