@@ -50,7 +50,7 @@ const Home = () => {
             <section>
                 <Container fluid className='justify-content-center'>
                     <Row className='justify-content-center'>
-                        <Col lg={9} md={11} sm={11} xs={12} className='p-3 justify-content-center'>
+                        <Col lg={8} md={11} sm={11} xs={12} className='p-3 justify-content-center'>
                             <Card className='w-100'>
                                 <Card.Header style={{ display: "flex", justifyContent: "space-between" }}>
                                     <h2>Order List</h2>
@@ -71,7 +71,7 @@ const Home = () => {
                                                         <th className='p-2 '>Customer Name</th>
                                                         <th className='p-2 '>Service List</th>
                                                         <th className='p-2 '>Total Cost</th>
-                                                        <th className='p-2 '>Status</th>
+                                                        
                                                     </tr>
                                                     {orderdata.map((datas, intex) => {
                                                         const totalamount = datas.service.amount - datas.Disamount

@@ -96,6 +96,7 @@ import Register from './NewCompounent/Register';
 import SideNav from './NewCompounent/SideNav';
 import Home from './NewCompounent/Home';
 import Newservices from './NewCompounent/Newservices';
+import Customer from './NewCompounent/Customer';
 
 
 
@@ -121,6 +122,7 @@ function App() {
         <Route path='/' element={<ReactLogin />} />    
         <Route path='/home' element={<Home />} />
         <Route path='/sericice' element={<Newservices />} />
+        <Route path='/customer' element={<Customer />} />
       </Routes>
       
     </Router>

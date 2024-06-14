@@ -45,7 +45,7 @@ const SideNav = () => {
 
                         </ul>
                     </div>
-                    <div className="offcanvas offcanvas-start bg-body-tertiary " tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width:"auto"}} onClick={change}>
+                    <div className="offcanvas offcanvas-start bg-body-tertiary " tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style={{ width:"15%"}} onClick={change}>
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title mt-3 " id="offcanvasNavbarLabel">SOWSEED</h5>
                             <button type="button" className="btn-close mt-2 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -68,7 +68,7 @@ const SideNav = () => {
                                 </li>
                                 <li className="nav-item" style={{ display: "inline-flex", alignItems: "center" }}>
                                 <FaUserGroup className='icon' style={{ marginRight: "8px" }} />
-                                    <Link to='/register' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Customers</Link>
+                                    <Link to='/customer' className="nav-link active" aria-current="page" style={{ marginLeft: "15px" }}>Customers</Link>
                                 </li>
                                 <li className="nav-item" style={{ display: "inline-flex", alignItems: "center" }}>
                                 <GrUserWorker className='icon' style={{ marginRight: "8px" }} />
