@@ -32,7 +32,7 @@ const Customer = () => {
         setCustomerdata(...Customerdata,cusInput)
     }
     
-    const handleDelete=(cusid)=>
+    const deleteService=(cusid)=>
         {
             axios.delete(`http://localhost:3000/customer/${cusid}`)
             .then(response=>{
@@ -40,6 +40,7 @@ const Customer = () => {
               setCustomerdata(Customerdata.filter(user => user.cusid !== cusid));
             })
         }
+        
         const HandleSearch = (e) => {
             const searchTerm = e.target.value.toLowerCase();
             const filteredData = searchcustomer.filter(user =>
@@ -47,7 +48,11 @@ const Customer = () => {
             );
             setCustomerdata(filteredData);
         };
-        
+        const handleDelete = (cusid) => {
+            if (window.confirm('Are you sure you want to delete this service?')) {
+                deleteService(cusid);
+            }
+        };
         
     return (
         <div>

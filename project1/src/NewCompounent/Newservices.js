@@ -15,26 +15,26 @@ import axios from 'axios';
 const Newservices = () => {
     const [servicedata, setservicedata] = useState([]);
     const [modalShow, setModalShow] = useState(false);
-    const [searchcustomer, setsearchCustomer] = useState("")
+    const [searchService, setsearchService] = useState("")
     useEffect(() => {
         axios.get('http://localhost:3000/service')
             .then((res) => {
-                setsearchCustomer(res.data)
+                setsearchService(res.data)
                 setservicedata(res.data)
             })
             .catch((Error) => {
                 console.log('error:', Error);
             })
-    }, []);
+    },[]);
 
     const HandleSearch = (e) => {
         e.preventDefault();
-        const filteredData = searchcustomer.filter(user =>
-            user.service.toLowerCase().includes(e.target.value.toLowerCase()));
+        const filteredData = searchService.filter(user =>
+            user.servicename.toLowerCase().includes(e.target.value.toLowerCase()));
             setservicedata(filteredData);
     };
-    const addService = (servicedata) => {
-      setservicedata([...servicedata, servicedata]);
+    const addService = (serviceInput) => {
+      setservicedata(...servicedata, serviceInput);
     };
 
     return (
@@ -73,7 +73,7 @@ const Newservices = () => {
                                                         return (
                                                             <tr key={intex}>
                                                                 <td>{datas.servicename ? datas.servicename.toUpperCase() : ''}</td>
-                                                                <td>{datas.amount }</td>
+                                                                <td>₹{datas.amount }</td>
                                                                 
                                                                 
                                                             </tr>

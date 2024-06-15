@@ -9,25 +9,26 @@ import axios from 'axios';
 
 
 const Servicepopup = (props) => {
-    const [servicedata, setServicedata] = useState({
+    const [serviceInput, setserviceInput] = useState({
         servicename: "", amount: ""
     })
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (servicedata.servicename === "" || servicedata.amount === "") {
+        if (serviceInput.servicename === "" || serviceInput.amount === "") {
             alert("please enter all data")
         }
         else {
-            axios.post('http://localhost:3000/service', servicedata)
+            axios.post('http://localhost:3000/service',serviceInput)
                 .then(response => {
-                    props.addService(servicedata);
-                    props.onHide();
+                    console.log(response.data);
+                    props.onHide()
+                    // props.addService(serviceInput) 
                     window.location.reload();
                 })
                 .catch(error => {
                     console.error('Error submitting service data:', error);
-                    // Handle error if needed
+                
                 });
         }
     }
@@ -48,10 +49,10 @@ const Servicepopup = (props) => {
                 <Modal.Body>
                     <>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text"  name="servicename" placeholder='Service Name' onChange={e => setServicedata({ ...servicedata, [e.target.name]: e.target.value })} />
+                            <Form.Control type="text"  name="servicename" placeholder='Service Name' onChange={e => setserviceInput({ ...serviceInput, [e.target.name]: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-3">
-                            <Form.Control type="number"  name="amount" placeholder='₹ Service Amount' onChange={e => setServicedata({ ...servicedata, [e.target.name]: e.target.value })} />
+                            <Form.Control type="number"  name="amount" placeholder='₹ Service Amount' onChange={e => setserviceInput({ ...serviceInput, [e.target.name]: e.target.value })} />
                         </Form.Group>
 
                     </>
@@ -59,10 +60,7 @@ const Servicepopup = (props) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button onClick={props.onHide}>Close</Button>
-                        <Button onClick={handleSubmit}>Submit</Button>
-  
-                
-
+                    <Button onClick={handleSubmit}>Submit</Button>
                 </Modal.Footer>
             </Modal>
         </div>

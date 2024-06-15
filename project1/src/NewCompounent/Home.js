@@ -81,7 +81,7 @@ const Home = () => {
                                                                 <td>{datas.id }</td>
                                                                 <td>{datas.cusname ? datas.cusname.toUpperCase() : ''}</td>
                                                                 <td>{datas.service.value}</td>
-                                                                <td>{totalamount}</td>
+                                                                <td>₹{totalamount}</td>
                                                                 {/* Fill in other table cells with respective data */}
                                                             </tr>
                                                         )

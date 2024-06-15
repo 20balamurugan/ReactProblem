@@ -8,28 +8,25 @@ import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Home.css';
-
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Customerpopup = (props) => {
     const randomNumber = Math.floor(Math.random(5) * 10000000);
     const [cusInput, seCusinput] = useState({
-        cusid: randomNumber, cusname: "", mobile: "", email: "", Address: "", remark: ""
+        cusid: randomNumber, cusname: "", mobile: "", email: "", address: "", remark: ""
     })
 
     const submitHandle = (e) => {
         e.preventDefault();
-        if (cusInput.cusid === "" || cusInput.cusname === "" || cusInput.mobile === "" || cusInput.email === "" || cusInput.Address === "" || cusInput.remark === "") {
+        if ( cusInput.cusname === "" && cusInput.mobile === "" && cusInput.email === "" && cusInput.address === "" && cusInput.remark === "") {
             alert("Please Enter all details");
         }
          
         else {
-            axios.post('http://localhost:3000/customer', cusInput)
+            axios.post('http://localhost:3000/customer',cusInput)
                 .then(response => {
                     props.addCus(cusInput);
-                    notify();
                     props.onHide();
                     window.location.reload(); 
                 })
@@ -39,7 +36,7 @@ const Customerpopup = (props) => {
                 });
         }
     };
-    const notify = () => toast("Wow so easy!");
+   
     return (
         <div>
             <Modal
@@ -56,7 +53,7 @@ const Customerpopup = (props) => {
                 <Modal.Body>
                     <>
                         <Form.Group className="mb-3">
-                            <Form.Control type="text" value={cusInput.cusid} readOnly name="cusid" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
+                            <Form.Control type="text" value={cusInput.cusid} readOnly="true" name="cusid" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Control type="text" placeholder="Customer Name" name="cusname" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
@@ -68,7 +65,7 @@ const Customerpopup = (props) => {
                             <Form.Control type="text" placeholder="Mail Id" name="email" controlId="formBasicEmail" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-3">
-                            <Form.Control as="textarea" placeholder="Address" name="Address" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
+                            <Form.Control type="textarea" placeholder="Address" name="address" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Control type="text" placeholder="Remork" name="remork" onChange={e => seCusinput({ ...cusInput, [e.target.name]: e.target.value })} />
@@ -80,7 +77,7 @@ const Customerpopup = (props) => {
                     <Button onClick={props.onHide}>Close</Button>
                     <div>
                     <Button onClick={submitHandle}>Submit</Button>
-                    <ToastContainer />
+                   
                     </div>
                     
                 </Modal.Footer>
